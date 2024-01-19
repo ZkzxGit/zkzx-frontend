@@ -1,0 +1,338 @@
+html {
+    @media print {
+        background-color: #fff !important;
+    }
+}
+
+body {
+    @media print {
+        color: #000;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    @media print {
+        background: none;
+    }
+    >.main-content {
+        flex: 1;
+        .is-centered-main-content & {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@import 'components/fonts';
+@import 'components/base';
+@import 'components/header';
+@import 'components/button';
+@import 'components/tabs';
+@import 'components/box';
+@import 'components/footer';
+@import 'components/txs';
+@import 'components/checkbox';
+@import 'components/radio';
+@import 'components/loading';
+@import 'components/fieldset';
+@import 'components/video';
+@import 'components/wallets';
+@import 'components/steps';
+@import 'components/dropdown';
+@import 'components/field';
+@import 'components/deposit';
+@import 'components/withdraw-data';
+@import 'components/modal';
+@import 'components/has-eth-purchase';
+@import 'components/notification';
+@import 'components/icon';
+@import 'components/tab-with-corner';
+@import 'components/label';
+@import 'components/notice';
+@import 'components/flag';
+@import 'components/compliance';
+@import 'components/textarea';
+@import 'components/info';
+@import 'components/proposals';
+@import 'components/slider';
+@import 'components/account';
+.b-tooltip {
+    align-items: center;
+    .tooltip-trigger {
+        display: inline-flex;
+    }
+}
+
+.dialog {
+    .modal-card {
+        border: 1px solid #393939;
+        border-radius: 6px;
+        &-foot {
+            .button {
+                flex: 1 1 50%;
+            }
+        }
+    }
+}
+
+.input {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    &.hide-spinner {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        -moz-appearance: textfield;
+    }
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-width: 1px;
+    border-radius: 1px;
+    margin-top: -0.4375rem;
+}
+
+.notices .toast {
+    @include until(375px) {
+        font-size: 0.85rem;
+    }
+}
+
+.geofence {
+    .footer .footer-address,
+    .break,
+    .dropdown-langs {
+        display: none;
+    }
+}
+
+.label-with-value {
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    span {
+        color: $primary;
+    }
+    a {
+        color: $primary;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.label {
+    font-size: 1rem;
+    color: $text;
+}
+
+.tag:not(body) {
+    font-weight: 700;
+    font-size: 0.857rem;
+    min-width: 70px;
+    height: 30px;
+}
+
+.progress {
+    height: 0.571rem;
+}
+
+.delete {
+    background-color: transparent;
+    &::before,
+    &::after {
+        background-color: #6b6b6b;
+        transition: background-color 0.15s ease-in-out;
+    }
+    &::before {
+        height: 1px;
+        width: 18px;
+    }
+    &::after {
+        height: 18px;
+        width: 1px;
+    }
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+}
+
+%arrow {
+    @include arrow;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent $white;
+}
+
+// xee styles
+html {
+    overflow: scroll !important;
+}
+
+::-webkit-scrollbar {
+    width: 0 !important;
+    /* Remove scrollbar space */
+    background: transparent !important;
+    /* Optional: just make scrollbar invisible */
+}
+
+.box {
+    color: #eee !important;
+}
+
+.network-button {
+    // background-color: #fff !important;
+    // color: #000 !important;
+    border: solid 1px #009dff !important
+}
+
+.notification {
+    background-color: #030103 !important;
+}
+
+.text-black-xee {
+    color: #393939 !important;
+}
+
+.mt-7 {
+    margin-top: 35px !important;
+}
+
+.dropdown-content {
+    background-color: #000403 !important;
+    color: #eee !important;
+    border: 1px solid #94febf;
+}
+
+.dropdown-item {
+    color: #eee;
+}
+
+.navbar-item,
+.navbar-link {
+    color: #eee !important
+}
+
+body {
+    color: #eee !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.xee-overflow-scroll {
+    overflow-y: scroll;
+}
+
+.b-tooltip.is-dark-tooltip .tooltip-content {}
+
+.footer-links-xee {
+    color: #fff !important;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.footer-address__name {
+    font-weight: bold;
+}
+
+.xee-tlbr a {
+    border-top-left-radius: 19px;
+}
+
+.xee-trbr a {
+    border-top-right-radius: 19px;
+}
+
+.network-button[data-v-f1b323a8] .icon {
+    background-color: #0d4768 !important;
+}
+
+.input {
+    color: #eee !important;
+}
+
+footer {
+    border-top: solid 2px #000;
+    padding: 10px !important;
+    padding-bottom: 20px !important;
+    font-size: 15px !important;
+}
+
+.is-white-xeedev {
+    margin-top: 20px;
+}
+
+.label-withdraw-xee {
+    width: 100%;
+    justify-content: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .b-tabs.is-white-xeedev.tab-content {
+        width: 70% !important;
+        height: 350px;
+    }
+    .deposit-button-xee {
+        // width: 50% !important;
+        margin: 0 auto;
+    }
+    .tab-content {
+        // margin: 0px 50px;
+    }
+}
+
+a.menu-item {
+    position: relative;
+    display: inline-block;
+    transition: transform .3s;
+    overflow: hidden;
+}
+
+a.menu-item>span {
+    color: #000;
+    display: block;
+    font-size: 1.5em;
+    line-height: 25px;
+    height: 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    padding: 0 5px;
+}
+
+a.menu-item:hover>span {
+    transform: translateY(-100%);
+}
+
+a.menu-item span:before {
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    position: absolute;
+    top: 100%;
+    content: attr(data-title);
+    transform: translateZ(0);
+    overflow: hidden;
+}
