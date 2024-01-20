@@ -701,7 +701,7 @@ const actions = {
     // const withdrawType = state.withdrawType
     let relayer
     if (netId === '369') {
-      relayer = BigInt('0x672C01502727A39b38fF1d070D5f252d82AF5dC5')
+      relayer = BigInt('0x438DfB3a3BA5AD5829bdc6b7de4578aBd2835a8c')
     }
     // const fee = BigInt('1000000000000000')
     const refund = BigInt(0)
@@ -767,7 +767,7 @@ const actions = {
       if (parsedNote.currency === 'eth' && Number(parsedNote.amount) === 0.1) {
         fee = BigInt(parsedNote.amount * 1 * 10 ** 17)
       } else {
-        fee = BigInt(parsedNote.amount * 2 * 10 ** 16)
+        fee = BigInt(parsedNote.amount * 5 * 10 ** 15)
       }
 
       const { proof, args } = await dispatch('createSnarkProof', {

@@ -27,7 +27,7 @@
       <!-- </div> -->
       <div v-if="withdrawType === 'relayer' && currency !== 'STORM'" class="withdraw-data-item">
         {{ $t('totalFee') }}
-        <span data-test="label_total_fee">2%</span>
+        <span data-test="label_total_fee">0.5%</span>
         <!-- {{ toDecimals(totalRelayerFee, null, 6) }} {{ currency }} -->
       </div>
       <!-- <div v-if="isTokenSelected" class="withdraw-data-item">
