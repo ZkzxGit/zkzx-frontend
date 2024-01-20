@@ -1,19 +1,19 @@
 <template>
   <div class="field">
-    <!-- <div class="label">
-      {{ $t('relayerTotal.label') }}
-    </div> -->
-    <div class="withdraw-data">
-      <!-- <div class="withdraw-data-item">
-        {{ $t('relayerTotal.name') }}
-        <span>{{ relayerName }}</span>
-      </div> -->
-      <div class="withdraw-data-item">
-        {{ $t('relayerTotal.fee') }}
-        <!-- <span>{{ selectedRelayer.tornadoServiceFee }}%</span> -->
-        <span>1%</span>
-      </div>
-    </div>
+    <!-- <div class="label"> -->
+    <!-- {{ $t('relayerTotal.label') }} -->
+    <!--</div> -->
+    <!-- <div class="withdraw-data">  -->
+    <!-- <div class="withdraw-data-item">  -->
+    <!-- {{ $t('relayerTotal.name') }}  -->
+    <!-- <span>{{ relayerName }}</span>  -->
+    <!-- </div> -->
+    <!-- <div class="withdraw-data-item">  -->
+    <!-- {{ $t('relayerTotal.fee') }}  -->
+    <!-- <span>{{ selectedRelayer.tornadoServiceFee }}%</span> -->
+    <!-- <span>1%</span>  -->
+    <!-- </div>  -->
+    <!-- </div>  -->
   </div>
 </template>
 

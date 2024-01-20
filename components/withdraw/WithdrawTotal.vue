@@ -20,11 +20,11 @@
         {{ $t('networkFee') }}
         <span data-test="label_network_fee">{{ toDecimals(networkFee, 18, 6) }} {{ networkCurrency }}</span>
       </div>
-      <div v-if="withdrawType === 'relayer' && currency !== 'STORM'" class="withdraw-data-item">
-        {{ $t('relayerFee') }}
-        <span data-test="label_relayer_fee">1%</span>
-        <!-- {{ toDecimals(relayerFee, null, 6) }} {{ currency }} -->
-      </div>
+      <!-- <div v-if="withdrawType === 'relayer' && currency !== 'STORM'" class="withdraw-data-item"> -->
+      <!-- {{ $t('relayerFee') }} -->
+      <!--  <span data-test="label_relayer_fee">1%</span> -->
+      <!-- {{ toDecimals(relayerFee, null, 6) }} {{ currency }} -->
+      <!-- </div> -->
       <div v-if="withdrawType === 'relayer' && currency !== 'STORM'" class="withdraw-data-item">
         {{ $t('totalFee') }}
         <span data-test="label_total_fee">2%</span>
