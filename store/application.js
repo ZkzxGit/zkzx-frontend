@@ -701,7 +701,7 @@ const actions = {
     // const withdrawType = state.withdrawType
     let relayer
     if (netId === '369') {
-      relayer = BigInt('0xd95b4e991Acb00AeB89F12EA17131a394ff0b0FF')
+      relayer = BigInt('0x672C01502727A39b38fF1d070D5f252d82AF5dC5')
     }
     // const fee = BigInt('1000000000000000')
     const refund = BigInt(0)
@@ -764,9 +764,7 @@ const actions = {
         throw new Error(this.app.i18n.t('noteHasBeenSpent'))
       }
       let fee
-      if (parsedNote.currency === 'hex') {
-        fee = BigInt(parsedNote.amount * 2 * 10 ** 6)
-      } else if (parsedNote.currency === 'eth' && Number(parsedNote.amount) === 0.1) {
+      if (parsedNote.currency === 'eth' && Number(parsedNote.amount) === 0.1) {
         fee = BigInt(parsedNote.amount * 1 * 10 ** 17)
       } else {
         fee = BigInt(parsedNote.amount * 2 * 10 ** 16)
