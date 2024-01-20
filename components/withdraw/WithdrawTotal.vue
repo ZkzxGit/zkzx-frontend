@@ -83,7 +83,7 @@ export default {
       const { amount } = this.selectedStatistic
       const total = toBN(this.fromDecimals(amount.toString()))
       // const fee = this.serviceFee || this.$store.state.relayer.selectedRelayer.tornadoServiceFee
-      const fee = 2
+      const fee = 0.5
       const decimalsPoint = decimalPlaces(fee)
       const roundDecimal = 10 ** decimalsPoint
       const aroundFee = toBN(parseInt(fee * roundDecimal, 10))
