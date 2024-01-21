@@ -64,7 +64,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Non-custodial Ethereum Privacy solution.'
+        content: 'Non-custodial Pulse Privacy solution.'
       },
       {
         hid: 'og:title',
@@ -74,7 +74,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Non-custodial, trustless, serverless, private transactions on Ethereum network'
+        content: 'Non-custodial, trustless, serverless, private transactions on Pulse chain'
       },
       {
         hid: 'og:url',
@@ -89,13 +89,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Non-custodial, trustless, serverless, private transactions on Ethereum network'
+        content: 'Non-custodial, trustless, serverless, private transactions on Pulse chain'
       },
       {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'Tornado, Ethereum, ERC20, dapp, smart contract, decentralized, metamask, zksnark, zero knowledge'
+          'Tornado, Pulse, ERC20, dapp, smart contract, decentralized, metamask, zksnark, zero knowledge'
       }
     ],
     link: [
