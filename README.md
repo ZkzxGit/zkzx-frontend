@@ -1,4 +1,4 @@
-# Tornado Cash Classic UI
+# ZKZX Cash Classic UI
 
 > UI for non-custodial Ethereum Privacy solution
 
