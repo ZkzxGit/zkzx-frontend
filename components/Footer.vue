@@ -57,7 +57,7 @@
                   rel="noopener noreferrer"
                   icon-right="telegram"
                 ></b-button> -->
-                <b-button
+                <!-- <b-button
                   tag="a"
                   type="is-icon"
                   href="https://twitter.com/Tornadocash2"
@@ -80,8 +80,8 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="github"
-                ></b-button>
-                <div class="break"></div>
+                ></b-button> -->
+                <!-- <div class="break"></div> -->
                 <b-dropdown
                   v-model="$i18n.locale"
                   class="dropdown-langs"

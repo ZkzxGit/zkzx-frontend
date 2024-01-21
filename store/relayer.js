@@ -445,11 +445,11 @@ export const actions = {
       //   },
       //   { root: true }
       // )
-      let apilink = 'https://tornadov2-relayer-eth.herokuapp.com/relay'
-      if (netId === '369') {
-        // apilink = 'https://tornadov2-relayer-bsc.herokuapp.com/relay'
-        apilink = 'https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/relay'
-      }
+      const apilink = 'https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/relay'
+      // if (netId === '369') {
+      //   // apilink = 'https://tornadov2-relayer-bsc.herokuapp.com/relay'
+      //   apilink = 'https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/relay'
+      // }
       const response = await fetch(apilink, {
         // const response = await fetch('https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/relay', {
         method: 'POST',
@@ -578,11 +578,11 @@ export const actions = {
             retryAttempt = 6
             throw new Error('Relayer is not responding')
           }
-          let apilink = `https://tornadov2-relayer-eth.herokuapp.com/v1/jobs/${id}`
-          if (netId === '369') {
-            // apilink = `https://tornadov2-relayer-bsc.herokuapp.com/v1/jobs/${id}`
-            apilink = `https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/v1/jobs/${id}`
-          }
+          const apilink = `https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/v1/jobs/${id}`
+          // if (netId === '369') {
+          //   // apilink = `https://tornadov2-relayer-bsc.herokuapp.com/v1/jobs/${id}`
+          //   apilink = `https://zkzx-relayer-3b0b5fafb79a.herokuapp.com/v1/jobs/${id}`
+          // }
           const response = await fetch(apilink, {
             method: 'GET',
             mode: 'cors',
