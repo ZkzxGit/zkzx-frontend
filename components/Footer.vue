@@ -28,7 +28,7 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://discord.com/invite/TFDrM8K42j"
+                  href="https://discord.com/invite/"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="discord"
@@ -36,7 +36,7 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://tornado-cash.medium.com"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="medium"
@@ -44,7 +44,7 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://twitter.com/TornadoCash"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="twitter"
@@ -52,7 +52,7 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://t.me/TornadoCashOfficial"
+                  href="https://t.me/"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="telegram"
@@ -60,7 +60,7 @@
                 <!-- <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://twitter.com/Tornadocash2"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="twitter"
@@ -68,20 +68,20 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://t.me/tornadocash_v2"
+                  href="https://t.me/"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="telegram"
-                ></b-button>
+                ></b-button> -->
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://github.com/tornadocash2"
+                  href="https://github.com/ZkzxGit/zkzx-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="github"
-                ></b-button> -->
-                <!-- <div class="break"></div> -->
+                ></b-button>
+                <div class="break"></div>
                 <b-dropdown
                   v-model="$i18n.locale"
                   class="dropdown-langs"
