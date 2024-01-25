@@ -76,7 +76,7 @@
                 <b-button
                   tag="a"
                   type="is-icon"
-                  href="https://github.com/ZkzxGit/zkzx-frontend"
+                  href="https://github.com/ZkzxGit"
                   target="_blank"
                   rel="noopener noreferrer"
                   icon-right="github"
