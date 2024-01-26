@@ -61,7 +61,6 @@ class RelayerRegister {
         },
         storeName: 'lastEvents'
       })
-
       if (events.length) {
         this.$indexedDB.createMultipleTransactions({ data: events, storeName })
       }

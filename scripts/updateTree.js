@@ -14,7 +14,7 @@ const TREES_PATH = './static/trees/'
 const EVENTS_PATH = './static/events/'
 
 const EVENTS = ['deposit']
-const enabledChains = ['1']
+const enabledChains = ['369']
 let mimcHash
 
 const trees = {
@@ -22,14 +22,14 @@ const trees = {
   LEVELS: 20 // const from contract
 }
 
-function getName({ path, type, instance, format = '.json', currName = 'eth' }) {
+function getName({ path, type, instance, format = '.json', currName = 'pls' }) {
   return `${path}${type.toLowerCase()}s_${currName}_${instance}${format}`
 }
 
 function createTreeZip(netId) {
   try {
     const config = networkConfig[`netId${netId}`]
-    const { instanceAddress: CONTRACTS } = config.tokens.eth
+    const { instanceAddress: CONTRACTS } = config.tokens.pls
 
     for (const type of EVENTS) {
       for (const [instance] of Object.entries(CONTRACTS)) {
@@ -61,7 +61,7 @@ async function createTree(netId) {
     const { currencyName, tokens, deployedBlock } = networkConfig[`netId${netId}`]
 
     const currName = currencyName.toLowerCase()
-    const { instanceAddress: CONTRACTS } = tokens.eth
+    const { instanceAddress: CONTRACTS } = tokens.pls
 
     for (const type of EVENTS) {
       for (const [instance] of Object.entries(CONTRACTS)) {
@@ -137,7 +137,7 @@ async function initMimc() {
 }
 
 async function main() {
-  const [, , , chain] = process.argv
+  const chain = '369'
   if (!enabledChains.includes(chain)) {
     throw new Error(`Supported chain ids ${enabledChains.join(', ')}`)
   }

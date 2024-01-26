@@ -210,7 +210,6 @@ class IndexedDB {
 
     try {
       const tx = this.db.transaction(storeName, mode)
-
       data.map((item) => {
         if (item) {
           tx.store.put({ ...item, ...index })

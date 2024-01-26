@@ -344,7 +344,6 @@ class EventService {
       }
 
       const instanceName = this.getInstanceName(type)
-
       await this.idb.createMultipleTransactions({
         data: events,
         storeName: instanceName

@@ -9,7 +9,7 @@ import InstanceABI from '@/abis/Instance.abi.json'
 import TornadoProxyABI from '@/abis/TornadoProxy.abi.json'
 
 import { ACTION, ACTION_GAS } from '@/constants/variables'
-import { graph, treesInterface, EventsFactory } from '@/services'
+import { treesInterface, EventsFactory } from '@/services' // graph
 
 import {
   randomBN,
@@ -270,13 +270,12 @@ const actions = {
 
     const eventService = getters.eventsInterface.getService({ netId, amount, currency })
 
-    const graphEvents = await eventService.getEventsFromGraph({ methodName: 'getStatistic' })
-
+    // const graphEvents = await eventService.getEventsFromGraph({ methodName: 'getStatistic' })
+    const graphEvents = ''
     let statistic = graphEvents?.events
 
     if (!statistic || !statistic.length) {
       const fresh = await eventService.getStatisticsRpc({ eventsCount: 10 })
-
       statistic = fresh || []
     }
 
@@ -440,7 +439,6 @@ const actions = {
       const { netId } = rootState.metamask
       const rpc = rootGetters['settings/currentRpc']
       let { ENCRYPTED_NOTES_BLOCK: deployedBlock } = networkConfig[`netId${netId}`].constants
-
       const contractInstance = getters.tornadoProxyContract({ netId })
 
       let cachedEvents = await dispatch('getEncryptedEventsFromDb', { netId })
@@ -449,7 +447,6 @@ const actions = {
       }
 
       const LENGTH_CACHE = networksWithCache[Number(netId)]
-
       if (
         ((isEmptyArray(cachedEvents) || !cachedEvents) && networksWithCache[Number(netId)]) ||
         cachedEvents.length < LENGTH_CACHE
@@ -470,23 +467,23 @@ const actions = {
 
       let events = []
 
-      const { events: graphEvents, lastSyncBlock } = await graph.getAllEncryptedNotes({
-        netId,
-        fromBlock: deployedBlock
-      })
+      // const { events: graphEvents, lastSyncBlock } = await graph.getAllEncryptedNotes({
+      //   netId,
+      //   fromBlock: deployedBlock
+      // })
 
-      if (lastSyncBlock) {
-        deployedBlock = lastSyncBlock
-      }
+      // if (lastSyncBlock) {
+      //   deployedBlock = lastSyncBlock
+      // }
 
       const blockDifference = Math.ceil(currentBlockNumber - deployedBlock)
       const divisor = hasCache ? 2 : 10
 
-      let blockRange = blockDifference > divisor ? blockDifference / divisor : blockDifference
+      const blockRange = blockDifference > divisor ? blockDifference / divisor : blockDifference
 
-      if (Number(netId) === 56) {
-        blockRange = 4950
-      }
+      // if (Number(netId) === 56) {
+      //   blockRange = 4950
+      // }
 
       let numberParts = blockDifference === 0 ? 1 : Math.ceil(blockDifference / blockRange)
       const part = Math.ceil(blockDifference / numberParts)
@@ -522,7 +519,8 @@ const actions = {
           }))
       }
 
-      const allEvents = [].concat(cachedEvents, graphEvents, events)
+      // const allEvents = [].concat(cachedEvents, graphEvents, events)
+      const allEvents = [].concat(cachedEvents, events)
 
       await dispatch('saveEncryptedEventsToDB', { events: allEvents, netId })
 
@@ -674,18 +672,15 @@ const actions = {
     ])
     const commitments = eventsData.events.map((el) => el.commitment.toString(10))
     let tree = cachedTree
-    console.log('debug->cachedTree', cachedTree)
     // let tree
     if (tree) {
       const newLeaves = commitments.slice(tree.elements.length)
-      console.log('debug->tree', tree, newLeaves)
       tree.bulkInsert(newLeaves)
     } else {
       checkCommitments(eventsData.events)
       tree = treeService.createTree({ events: commitments })
     }
     const root = toFixedHex(tree.root)
-    console.log('debug->root', tree.root, root)
     await dispatch('checkRoot', { root, parsedNote: params })
     await treeService.saveTree({ tree })
 
@@ -741,7 +736,6 @@ const actions = {
 
     console.log('Start generating SNARK proof', input)
     console.time('SNARK proof time')
-    console.log('debug->genWitnessAndProve', groth16, input, circuit, provingKey)
     const proofData = await websnarkUtils.genWitnessAndProve(groth16, input, circuit, provingKey)
     const { proof } = websnarkUtils.toSolidityInput(proofData)
     const args = [

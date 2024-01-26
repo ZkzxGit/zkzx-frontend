@@ -11,9 +11,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "update:zip": "node -r esm scripts/updateZip.js",
-    "update:events": "node -r esm scripts/updateEvents.js --network",
-    "update:encrypted": "node -r esm scripts/updateEncryptedEvents.js --network",
-    "update:tree": "node -r esm scripts/updateTree.js --network",
+    "update:events": "node -r esm scripts/updateEvents.js --369",
+    "update:encrypted": "node -r esm scripts/updateEncryptedEvents.js --369",
+    "update:tree": "node -r esm scripts/updateTree.js --369",
     "generate": "nuxt generate",
     "ipfsUpload": "node scripts/ipfsUpload.js",
     "deploy:ipfs": "yarn generate && yarn ipfsUpload"

@@ -19,7 +19,6 @@ async function saveEncryptedNote(netId) {
   } = networkConfig[`netId${netId}`]
 
   const contractAddress = tornadoRouter || tornadoProxy || lightProxy
-
   let encryptedEvents = []
   const name = `encrypted_notes_${netId}.json`
 
@@ -29,8 +28,6 @@ async function saveEncryptedNote(netId) {
     deployedBlock: constants.ENCRYPTED_NOTES_BLOCK
   })
 
-  console.log('cachedEvents', cachedEvents.events.length)
-
   encryptedEvents = await getPastEvents({
     netId,
     type: 'EncryptedNote',
@@ -38,8 +35,6 @@ async function saveEncryptedNote(netId) {
     fromBlock: cachedEvents.lastBlock + 1,
     contractAttrs: [ABI, contractAddress]
   })
-
-  console.log('Encrypted note', netId, encryptedEvents.length)
 
   encryptedEvents = encryptedEvents.reduce((acc, curr) => {
     if (curr.returnValues.encryptedNote) {
@@ -61,7 +56,7 @@ async function saveEncryptedNote(netId) {
 }
 
 async function main() {
-  const [, , , chain] = process.argv
+  const chain = '369'
   if (!enabledChains.includes(chain)) {
     throw new Error(`Supported chain ids ${enabledChains.join(', ')}`)
   }

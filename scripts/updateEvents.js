@@ -75,7 +75,7 @@ async function main(type, netId) {
 }
 
 async function start() {
-  const [, , , chain] = process.argv
+  const chain = '369'
   if (!enabledChains.includes(chain)) {
     throw new Error(`Supported chain ids ${enabledChains.join(', ')}`)
   }

@@ -57,6 +57,9 @@ export const cachedEventsLength = {
   },
   bsc: {
     ENCRYPTED_NOTES: 11333
+  },
+  pulse: {
+    ENCRYPTED_NOTES: 1
   }
 }
 

@@ -52,7 +52,8 @@
       ></b-input>
       <div v-if="hasErrorNote" class="help" :class="hasErrorNote.type">
         <!-- eslint-disable vue/no-v-html -->
-        <p v-html="hasErrorNote.msg"></p>
+        <!-- <p v-html="hasErrorNote.msg"></p> -->
+        <p>{{ hasErrorNote.msg }}</p>
       </div>
     </div>
     <div v-if="!hasErrorNote && depositTxHash" class="field field-withdraw">
