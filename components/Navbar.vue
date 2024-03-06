@@ -20,7 +20,7 @@
         {{ $t('compliance') }}
       </b-navbar-item>
       <b-navbar-item
-        href="https://github.com/Tornadocash2/docs"
+        href="https://github.com/ZkzxGit"
         target="_blank"
         data-test="docs_link"
         rel="noopener noreferrer"

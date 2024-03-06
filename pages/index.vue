@@ -50,12 +50,9 @@
     >
       <i18n path="indexNotification">
         <template v-slot:link>
-          <a
-            href="https://twitter.com/Tornadocash2/status/1591471360353906690"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ $t('indexNotificationLinkText') }}</a
-          >
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">{{
+            $t('indexNotificationLinkText')
+          }}</a>
         </template>
       </i18n>
     </b-notification>
